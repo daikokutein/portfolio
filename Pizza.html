@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Delivery</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="logo">Pizza Palace</div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order Now</a></li>
+      </ul>
+    </nav>
+  </header>
+<style>/* Global Styles */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #000000;
+  }
+  
+  header {
+    background-color: #d32f2f;
+    padding: 15px;
+    text-align: center;
+    color: white;
+  }
+  
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  header nav ul li {
+    margin: 0 15px;
+  }
+  
+  header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  header nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('hero-pizza.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    color: white;
+  }
+  
+  .hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .hero .btn {
+    background-color: #f57c00;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #ef6c00;
+  }
+  
+  /* Menu Section */
+  .menu-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+  
+  .menu-section h2 {
+    margin-bottom: 40px;
+    color: #d32f2f;
+  }
+  
+  .menu-grid {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu-item {
+    text-align: center;
+  }
+  
+  .menu-item img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  
+  .menu-item h3 {
+    margin: 15px 0;
+  }
+  
+  .menu-item p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .menu-item .price {
+    font-size: 18px;
+    color: #d32f2f;
+  }
+  
+  /* Order Form Section */
+  .order-section {
+    padding: 50px 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .order-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d32f2f;
+  }
+  
+  .pizza-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .pizza-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .pizza-form input,
+  .pizza-form select,
+  .pizza-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .pizza-form .order-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #d32f2f;
+  }
+  </style>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Pizza Palace</h1>
+      <p>Delicious pizzas made with love and the finest ingredients.</p>
+      <a href="#menu" class="btn">View Menu</a>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <h2>Our Menu</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="pizza1.jpg" alt="Margherita Pizza">
+        <h3>Margherita</h3>
+        <p>A classic delight with fresh mozzarella and basil.</p>
+        <span class="price">120</span>
+      </div>
+      <div class="menu-item">
+        <img src="pizza2.jpg" alt="Pepperoni Pizza">
+        <h3>Pepperoni</h3>
+        <p>Loaded with pepperoni and mozzarella cheese.</p>
+        <span class="price">140</span>
+      </div>
+      <div class="menu-item">
+        <img src="pizza3.jpg" alt="Veggie Pizza">
+        <h3>Veggie</h3>
+        <p>A garden of veggies on a delicious crust.</p>
+        <span class="price">130</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form Section -->
+  <section id="order" class="order-section">
+    <h2>Place Your Order</h2>
+    <form action="#" method="POST" class="pizza-form">
+      
+      <!-- Customer Info -->
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Your email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" placeholder="Your phone number" required>
+
+      <!-- Pizza Info -->
+      <label for="size">Pizza Size:</label>
+      <select id="size" name="size" required>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="large">Large</option>
+      </select>
+
+      <label>Crust Type:</label>
+      <div class="crust-options">
+        <label><input type="radio" name="crust" value="thin" required> Thin Crust</label>
+        <label><input type="radio" name="crust" value="thick" required> Thick Crust</label>
+        <label><input type="radio" name="crust" value="stuffed" required> Stuffed Crust</label>
+      </div>
+
+      <label>Extra Toppings:</label>
+      <div class="topping-options">
+        <label><input type="checkbox" name="toppings" value="mushrooms"> Mushrooms</label>
+        <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+        <label><input type="checkbox" name="toppings" value="onions"> Onions</label>
+        <label><input type="checkbox" name="toppings" value="olives"> Olives</label>
+      </div>
+
+      <label for="instructions">Special Instructions:</label>
+      <textarea id="instructions" name="instructions" placeholder="Any special requests?"></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="order-btn">Place Order</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Pizza Palace | Follow us on 
+      <a href="#">Instagram</a>, 
+      <a href="#">Facebook</a>, 
+      <a href="#">Twitter</a>
+    </p>
+  </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
